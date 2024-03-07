@@ -1,5 +1,5 @@
 {
-  "mode": "pre",
+  "mode": "exit",
   "tag": "prealpha",
   "initialVersions": {
     "aaronddm-demo-package-a": "0.0.1",
