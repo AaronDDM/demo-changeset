@@ -7,22 +7,21 @@ on:
   pull_request:
 
 permissions:
-  actions: read
-  contents: read
+  contents: write
+  pull-requests: write
+  repository-projects: write
+  id-token: write # needed for provenance data generation
 
 jobs:
   main:
     runs-on: ubuntu-latest
+    outputs:
+      generate_slack_payload: ${{ steps.generate_slack_payload.outputs.SLACK_PAYLOAD }}
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # Connect your workspace on nx.app and uncomment this to enable task distribution.
-      # The "--stop-agents-after" is optional, but allows idle agents to shut down once the "build" targets have been requested
-      # - run: pnpm exec nx-cloud start-ci-run --distribute-on="5 linux-medium-js" --stop-agents-after="build"
-
-      
       - uses: pnpm/action-setup@v2
         with:
           version: 8
@@ -34,5 +33,34 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - uses: nrwl/nx-set-shas@v4
 
+
+      - name: Creating .npmrc
+        run: |
+            cat << EOF > "$HOME/.npmrc"
+            //registry.npmjs.org/:_authToken=$NPM_TOKEN
+            EOF
+        env:
+            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       - run: pnpm exec nx-cloud record -- nx format:check
       - run: pnpm exec nx affected -t lint test build
+
+      - name: Create Release Pull Request or Publish to npm
+        id: changesets
+        uses: changesets/action@v1
+        if: github.repository == 'AaronDDM/demo-changeset'
+        with:
+          version: pnpm changeset:version
+          publish: pnpm changeset:publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Send a Slack notification if a publish happens
+        if: steps.changesets.outputs.published == 'true' && github.repository == 'AaronDDM/demo-changeset'
+        id: generate_slack_payload
+        run: |
+          JSON=$(echo '${{steps.changesets.outputs.publishedPackages}}' | jq -c '{ "blocks": ([{"type": "header", "text": {"type": "plain_text", "emoji": true, "text": ":tada: New packages published"}}, {"type": "divider"}] + [ .[] | {"type": "section", "text": { "type": "mrkdwn", "text": "*\(.name)*\n\(.version)"}}]) }')
+          curl -X POST -H 'Content-type: application/json' --data "$JSON" "$SLACK_WEBHOOK_URL"
+        env:
+            SLACK_WEBHOOK_URL: ${{ vars.SLACK_WEBHOOK_URL }}
