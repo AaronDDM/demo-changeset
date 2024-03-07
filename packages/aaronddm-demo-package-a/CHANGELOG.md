@@ -1,5 +1,11 @@
 # aaronddm-demo-package-a
 
+## 0.0.2-prealpha.6
+
+### Patch Changes
+
+- 9ba5410: Added 1000
+
 ## 0.0.2-prealpha.5
 
 ### Patch Changes
