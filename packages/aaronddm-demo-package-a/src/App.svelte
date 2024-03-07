@@ -17,6 +17,7 @@
 
   <p>Adding a new update</p>
   <p>Adding another new update</p>
+  <p>Adding even more than amazing than before new update</p>
 
   <div class="card">
     <Counter />
