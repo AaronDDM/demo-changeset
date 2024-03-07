@@ -62,7 +62,7 @@ jobs:
         if: steps.changesets.outputs.published == 'true'
         id: generate_slack_payload
         run: |
-          JSON=$(echo '[{"name":"aaronddm-demo-package-a","version":"0.0.2-prealpha.1"}]' | jq -c '{ "blocks": ([{"type": "header", "text": {"type": "plain_text", "emoji": true, "text": ":tada: New packages published"}}, {"type": "divider"}] + [ .[] | {"type": "section", "text": { "type": "mrkdwn", "text": "*\(.name)*\n\(.version)"}}]) }')
-          curl -X POST -H 'Content-type: application/json' --data $JSON $SLACK_WEBHOOK_URL
+          JSON=$(echo '${{steps.changesets.outputs.publishedPackages}}' | jq -c '{ "blocks": ([{"type": "header", "text": {"type": "plain_text", "emoji": true, "text": ":tada: New packages published"}}, {"type": "divider"}] + [ .[] | {"type": "section", "text": { "type": "mrkdwn", "text": "*\(.name)*\n\(.version)"}}]) }')
+          curl -X POST -H 'Content-type: application/json' --data "$JSON" "$SLACK_WEBHOOK_URL"
         env:
             SLACK_WEBHOOK_URL: ${{ vars.SLACK_WEBHOOK_URL }}
