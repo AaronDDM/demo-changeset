@@ -16,4 +16,4 @@ jobs:
 
       - name: Print the output
         run: |
-          echo ${{ steps.generate_slack_payload.outputs.SLACK_PAYLOAD }}
+          echo '${{ steps.generate_slack_payload.outputs.SLACK_PAYLOAD }}'
