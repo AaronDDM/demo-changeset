@@ -3,6 +3,8 @@ name: CI
 on:
   push:
 
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
 permissions:
   contents: write
   pull-requests: write
