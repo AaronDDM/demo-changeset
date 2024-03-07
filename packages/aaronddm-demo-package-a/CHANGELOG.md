@@ -1,5 +1,19 @@
 # aaronddm-demo-package-a
 
+## 0.0.2
+
+### Patch Changes
+
+- 9ba5410: Added 1000
+- e482be7: Another important feature
+- ae9fec6: Adding even more than amazing than before new update PART 5
+- 005c9d1: Another new update even more amazing than before
+- 648e375: Featuer 5
+- a48b4a4: New important feature
+- 15e23b7: New feature 5000
+- cdee80b: Added 909
+- 4f80753: Added another new update. This is better than before.
+
 ## 0.0.2-prealpha.7
 
 ### Patch Changes

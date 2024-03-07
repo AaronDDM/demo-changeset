@@ -1,5 +1,18 @@
 # aaronddm-demo-package-b
 
+## 0.0.1
+
+### Patch Changes
+
+- 70672b2: Another cool feature
+- c8480a5: Added a new feature to package B - amazing stuff
+- e482be7: final change
+- 0754a93: And another one!!!
+- 7319e1f: And another one!!!!!!!!
+- e078f36: Real final one
+- dcb4ed2: Another one
+- 09fa31f: Real real final one 950
+
 ## 0.0.1-prealpha.7
 
 ### Patch Changes
