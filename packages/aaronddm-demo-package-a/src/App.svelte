@@ -20,6 +20,7 @@
   <p>Adding even more than amazing than before new update</p>
   <p>Adding even more than amazing than before new update PART 5</p>
   <p>Feature 5</p>
+  <p>New important feature</p>
 
   <div class="card">
     <Counter />
