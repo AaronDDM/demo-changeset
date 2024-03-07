@@ -1,5 +1,11 @@
 # aaronddm-demo-package-a
 
+## 0.0.2-prealpha.4
+
+### Patch Changes
+
+- e482be7: Another important feature
+
 ## 0.0.2-prealpha.3
 
 ### Patch Changes
