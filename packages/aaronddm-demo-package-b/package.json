@@ -1,6 +1,7 @@
 {
   "name": "aaronddm-demo-package-b",
-  "private": true,
+  "version": "0.0.0",
+  "private": false,
   "sideEffects": false,
   "type": "module",
   "scripts": {
