@@ -14,6 +14,7 @@ export default function Index() {
       <ul>
         <li>New feature</li>
         <li>Another cool feature</li>
+        <li>And another one</li>
         <li>
           <a
             target="_blank"
