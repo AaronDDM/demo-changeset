@@ -5,5 +5,9 @@
     "aaronddm-demo-package-a": "0.0.1",
     "aaronddm-demo-package-b": "0.0.1-2"
   },
-  "changesets": []
+  "changesets": [
+    "happy-foxes-remain",
+    "plenty-forks-guess",
+    "stale-students-clean"
+  ]
 }
