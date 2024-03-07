@@ -1,5 +1,11 @@
 # aaronddm-demo-package-b
 
+## 0.0.1-prealpha.2
+
+### Patch Changes
+
+- dcb4ed2: Another one
+
 ## 0.0.1-prealpha.1
 
 ### Patch Changes
