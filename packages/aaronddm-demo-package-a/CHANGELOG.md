@@ -1,5 +1,11 @@
 # aaronddm-demo-package-a
 
+## 0.0.2-prealpha.7
+
+### Patch Changes
+
+- 15e23b7: New feature 5000
+
 ## 0.0.2-prealpha.6
 
 ### Patch Changes
