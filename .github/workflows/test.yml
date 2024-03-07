@@ -1,0 +1,12 @@
+name: test
+
+on:
+    push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate slack JSON payload and save it to an output variabe
+        run: |
+          echo 'SLACK_PAYLOAD=$(echo \'[{"name":"aaronddm-demo-package-a","version":"0.0.2-prealpha.1"}]\' | jq \'{ "text": "New releases", "blocks": [.[] | {"type": "section", "text": { "type": "mrkdwn", "text": "Released version \\\(.version\) for \\\(.name\)"}}]}\')' >> $GITHUB_OUTPUT
