@@ -1,6 +1,6 @@
 {
   "name": "aaronddm-demo-package-b",
-  "version": "0.0.1-prealpha.4",
+  "version": "0.0.1-prealpha.5",
   "private": false,
   "sideEffects": false,
   "type": "module",
