@@ -63,6 +63,6 @@ jobs:
         with:
             # This data can be any valid JSON from a previous step in the GitHub Action
             payload: |
-              steps.changesets.outputs.publishedPackages | jq '{ "text": "New releases for packages", "blocks": [.[] | {"type": "section", "text": { "type": "mrkdwn", "text": "Released " + .version + ".name"}}]}'
+              echo ${{steps.changesets.outputs.publishedPackages}} | jq '{ "text": "New releases for packages", "blocks": [.[] | {"type": "section", "text": { "type": "mrkdwn", "text": "Released " + .version + ".name"}}]}'
         env:
             SLACK_WEBHOOK_URL: ${{ vars.SLACK_WEBHOOK_URL }}
