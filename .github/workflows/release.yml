@@ -62,7 +62,8 @@ jobs:
         if: steps.changesets.outputs.published == 'true'
         id: generate_slack_payload
         run: |
-          echo 'SLACK_PAYLOAD=$(echo \'${{steps.changesets.outputs.publishedPackages}}\' | jq \'{ "text": "New releases", "blocks": [.[] | {"type": "section", "text": { "type": "mrkdwn", "text": "Released version \(.version) for \(.name)"}}]}\')' >> $GITHUB_OUTPUT
+          JSON=$(echo '[{"name":"aaronddm-demo-package-a","version":"0.0.2-prealpha.1"}]' | jq -c '{ "text": "New releases", "blocks": [.[] | {"type": "section", "text": { "type": "mrkdwn", "text": "Released version \(.version) for \(.name)"}}]}')
+          echo "SLACK_PAYLOAD=$JSON" >> $GITHUB_OUTPUT
 
       - name: Send a Slack notification if a publish happens
         if: steps.changesets.outputs.published == 'true'
