@@ -23,6 +23,7 @@
   <p>New important feature</p>
   <p>Another important feature</p>
   <p>Added 909</p>
+  <p>Added 1000</p>
 
   <div class="card">
     <Counter />
