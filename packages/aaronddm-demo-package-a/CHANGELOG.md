@@ -1,5 +1,11 @@
 # aaronddm-demo-package-a
 
+## 0.0.2-prealpha.2
+
+### Patch Changes
+
+- 648e375: Featuer 5
+
 ## 0.0.2-prealpha.1
 
 ### Patch Changes
