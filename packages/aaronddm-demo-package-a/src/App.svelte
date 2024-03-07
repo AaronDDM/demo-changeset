@@ -16,6 +16,7 @@
   <h1>Vite + Svelte</h1>
 
   <p>Adding a new update</p>
+  <p>Adding another new update</p>
 
   <div class="card">
     <Counter />
