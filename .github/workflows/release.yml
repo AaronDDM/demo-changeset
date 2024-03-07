@@ -18,6 +18,8 @@ jobs:
       pull-requests: write
       repository-projects: write
       id-token: write # needed for provenance data generation
+    outputs:
+      generate_slack_payload: ${{ steps.generate_slack_payload.outputs.SLACK_PAYLOAD }}
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
@@ -56,13 +58,18 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+      - name: Generate slack JSON payload and save it to an output variabe
+        if: steps.changesets.outputs.published == 'true'
+        id: generate_slack_payload
+        run: |
+          echo 'SLACK_PAYLOAD=$(echo \'${{steps.changesets.outputs.publishedPackages}}\' | jq \'{ "text": "New releases", "blocks": [.[] | {"type": "section", "text": { "type": "mrkdwn", "text": "Released version \(.version) for \(.name)"}}]}\')' >> $GITHUB_OUTPUT
+
       - name: Send a Slack notification if a publish happens
         if: steps.changesets.outputs.published == 'true'
         uses: slackapi/slack-github-action@v1.25.0
         # You can do something when a publish happens.
         with:
             # This data can be any valid JSON from a previous step in the GitHub Action
-            payload: |
-              echo '${{steps.changesets.outputs.publishedPackages}}' | jq '{ "text": "New releases for packages", "blocks": [.[] | {"type": "section", "text": { "type": "mrkdwn", "text": "Released " + .version + ".name"}}]}'
+            payload: ${{ steps.generate_slack_payload.outputs.slack_payload }}
         env:
             SLACK_WEBHOOK_URL: ${{ vars.SLACK_WEBHOOK_URL }}
