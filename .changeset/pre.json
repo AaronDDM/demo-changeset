@@ -1,0 +1,9 @@
+{
+  "mode": "pre",
+  "tag": "canary",
+  "initialVersions": {
+    "aaronddm-demo-package-a": "0.0.2",
+    "aaronddm-demo-package-b": "0.0.1"
+  },
+  "changesets": []
+}
