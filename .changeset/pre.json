@@ -6,6 +6,7 @@
     "aaronddm-demo-package-b": "0.0.1-2"
   },
   "changesets": [
+    "green-dryers-push",
     "happy-foxes-remain",
     "neat-papayas-jump",
     "plenty-forks-guess",
