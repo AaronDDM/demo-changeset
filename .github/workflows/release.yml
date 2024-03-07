@@ -64,8 +64,7 @@ jobs:
             # This data can be any valid JSON from a previous step in the GitHub Action
             payload: |
                 {
-                    "key": "value",
-                    "foo": "bar"
+                    "text": "A new version of ${GITHUB_REPOSITORY} has been published!"
                 }
         env:
             SLACK_WEBHOOK_URL: ${{ vars.SLACK_WEBHOOK_URL }}
