@@ -11,6 +11,10 @@
     "start": "remix-serve ./build/server/index.js",
     "typecheck": "tsc"
   },
+  "files": [
+    "build",
+    "README.md"
+  ],
   "dependencies": {
     "@remix-run/node": "^2.8.0",
     "@remix-run/react": "^2.8.0",
