@@ -1,5 +1,11 @@
 # aaronddm-demo-package-b
 
+## 0.0.1-prealpha.6
+
+### Patch Changes
+
+- e078f36: Real final one
+
 ## 0.0.1-prealpha.5
 
 ### Patch Changes
