@@ -1,5 +1,11 @@
 # aaronddm-demo-package-b
 
+## 0.0.1-prealpha.1
+
+### Patch Changes
+
+- 70672b2: Another cool feature
+
 ## 0.0.1-prealpha.0
 
 ### Patch Changes
