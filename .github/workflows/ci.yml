@@ -46,7 +46,7 @@ jobs:
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
-        if: github.repository == 'AaronDDM/demo-changeset' && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/stable'))
+        if: github.repository == 'AaronDDM/demo-changeset' && github.repository == 'AaronDDM/demo-changeset' && (github.ref == 'refs/heads/main' || (startsWith(github.ref, 'refs/heads/stable') && github.event_name != 'pull_request'))
         with:
           version: pnpm changeset:version
           publish: pnpm changeset:publish
@@ -55,7 +55,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Send a Slack notification if a publish happens
-        if: steps.changesets.outputs.published == 'true' && github.repository == 'AaronDDM/demo-changeset' && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/stable'))
+        if: steps.changesets.outputs.published == 'true' && github.repository == 'AaronDDM/demo-changeset' && (github.ref == 'refs/heads/main' || (startsWith(github.ref, 'refs/heads/stable') && github.event_name != 'pull_request'))
         id: generate_slack_payload
         run: |
           JSON=$(echo '${{steps.changesets.outputs.publishedPackages}}' | jq -c '{ "blocks": ([{"type": "header", "text": {"type": "plain_text", "emoji": true, "text": ":tada: New packages published"}}, {"type": "divider"}] + [ .[] | {"type": "section", "text": { "type": "mrkdwn", "text": "*\(.name)*\n\(.version)"}}]) }')
