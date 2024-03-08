@@ -4,6 +4,9 @@
   "license": "MIT",
   "scripts": {
     "nx": "nx",
+    "release": "changeset publish && git push --follow-tags",
+    "release:canary": "changeset publish --tag canary --no-git-tag",
+    "changeset:version:canary": "changeset version --tag version && pnpm -r generate:version && git add --all",
     "changeset:version": "changeset version && pnpm -r generate:version && git add --all",
     "changeset:publish": "changeset publish"
   },
