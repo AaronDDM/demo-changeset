@@ -5,5 +5,8 @@
     "aaronddm-demo-package-a": "0.0.3",
     "aaronddm-demo-package-b": "0.0.1"
   },
-  "changesets": []
+  "changesets": [
+    "eighty-mangos-rush",
+    "strange-turtles-check"
+  ]
 }
