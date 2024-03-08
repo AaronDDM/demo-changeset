@@ -25,6 +25,7 @@
   <p>Added 909</p>
   <p>Added 1000</p>
   <p>Added 5000</p>
+  <p>Added 10000</p>
 
   <div class="card">
     <Counter />
