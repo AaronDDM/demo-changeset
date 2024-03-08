@@ -2,11 +2,8 @@
   "mode": "pre",
   "tag": "canary",
   "initialVersions": {
-    "aaronddm-demo-package-a": "0.0.3",
-    "aaronddm-demo-package-b": "0.0.1"
+    "aaronddm-demo-package-a": "0.0.4",
+    "aaronddm-demo-package-b": "0.0.2"
   },
-  "changesets": [
-    "eighty-mangos-rush",
-    "strange-turtles-check"
-  ]
+  "changesets": []
 }
