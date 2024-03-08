@@ -1,5 +1,11 @@
 # aaronddm-demo-package-b
 
+## 0.0.2-canary.0
+
+### Patch Changes
+
+- [#44](https://github.com/AaronDDM/demo-changeset/pull/44) [`00f0004`](https://github.com/AaronDDM/demo-changeset/commit/00f00046af841b1897f5728e6ce0ef9fbc90bded) Thanks [@AaronDDM](https://github.com/AaronDDM)! - Added 5555
+
 ## 0.0.1
 
 ### Patch Changes
