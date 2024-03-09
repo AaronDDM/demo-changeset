@@ -6,5 +6,8 @@
     "aaronddm-demo-package-b": "0.1.0",
     "aaronddm-demo-package-c": "1.0.0"
   },
-  "changesets": []
+  "changesets": [
+    "beige-apricots-ring",
+    "silly-lizards-push"
+  ]
 }
