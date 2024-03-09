@@ -1,5 +1,13 @@
 # aaronddm-demo-package-a
 
+## 0.0.5-canary.0
+
+### Patch Changes
+
+- [`859f7b9`](https://github.com/AaronDDM/demo-changeset/commit/859f7b9d301159ea40ab2bab6c8a66fb34fe620b) Thanks [@AaronDDM](https://github.com/AaronDDM)! - New package a feature 100
+
+- [`7b6fe9c`](https://github.com/AaronDDM/demo-changeset/commit/7b6fe9cfb8d217e5a2da42a6b21bfbf009027caf) Thanks [@AaronDDM](https://github.com/AaronDDM)! - New package a feature 2100
+
 ## 0.0.4
 
 ### Patch Changes
