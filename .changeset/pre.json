@@ -4,9 +4,7 @@
   "initialVersions": {
     "aaronddm-demo-package-a": "0.2.0",
     "aaronddm-demo-package-b": "0.2.0",
-    "aaronddm-demo-package-c": "0.0.0"
+    "aaronddm-demo-package-c": "1.0.0"
   },
-  "changesets": [
-    "little-scissors-fetch"
-  ]
+  "changesets": []
 }
