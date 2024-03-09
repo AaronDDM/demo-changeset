@@ -2,12 +2,9 @@
   "mode": "pre",
   "tag": "canary",
   "initialVersions": {
-    "aaronddm-demo-package-a": "0.1.0",
-    "aaronddm-demo-package-b": "0.1.0",
+    "aaronddm-demo-package-a": "0.2.0",
+    "aaronddm-demo-package-b": "0.2.0",
     "aaronddm-demo-package-c": "1.0.0"
   },
-  "changesets": [
-    "beige-apricots-ring",
-    "silly-lizards-push"
-  ]
+  "changesets": []
 }
