@@ -1,5 +1,15 @@
 # aaronddm-demo-package-b
 
+## 0.1.0-canary.0
+
+### Minor Changes
+
+- [`7427256`](https://github.com/AaronDDM/demo-changeset/commit/7427256d41fd718abfb9aa77ed172a5939c23ba3) Thanks [@AaronDDM](https://github.com/AaronDDM)! - Test
+
+### Patch Changes
+
+- [`6c27ead`](https://github.com/AaronDDM/demo-changeset/commit/6c27ead0378a0ed1de5e6c28e4b5bd8e095f613f) Thanks [@AaronDDM](https://github.com/AaronDDM)! - No changes?
+
 ## 0.0.3
 
 ### Patch Changes
