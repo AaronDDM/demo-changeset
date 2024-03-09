@@ -27,6 +27,7 @@
   <p>Added 5000</p>
   <p>Added 10000</p>
   <p>Added 9000</p>
+  <p>New package a feature 100</p>
 
   <div class="card">
     <Counter />
