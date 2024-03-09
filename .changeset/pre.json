@@ -5,5 +5,8 @@
     "aaronddm-demo-package-a": "0.0.5",
     "aaronddm-demo-package-b": "0.0.3"
   },
-  "changesets": []
+  "changesets": [
+    "orange-weeks-allow",
+    "tough-tips-warn"
+  ]
 }
