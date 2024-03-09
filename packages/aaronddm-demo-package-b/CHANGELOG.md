@@ -1,5 +1,11 @@
 # aaronddm-demo-package-b
 
+## 0.0.3-canary.0
+
+### Patch Changes
+
+- [`1011f49`](https://github.com/AaronDDM/demo-changeset/commit/1011f491c3ebecc1528a87cb45f0b8924170d5ad) Thanks [@AaronDDM](https://github.com/AaronDDM)! - Package B fix
+
 ## 0.0.2
 
 ### Patch Changes
