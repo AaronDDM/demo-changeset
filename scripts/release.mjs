@@ -3,15 +3,13 @@ import path from 'node:path';
 import { execSync } from 'node:child_process';
 
 // Get the packages to release from the command line
-const _releasePackages = process.argv[2];
+const releasePackages = process.argv.slice(2)
 
 // If no packages are provided, throw an error
-if (!_releasePackages) {
+if (!releasePackages) {
     console.error('No packages provided to release');
     process.exit(1);
 }
-
-const releasePackages = _releasePackages.split(',')
 
 // Exit the pre release
 await $`pnpm exec changeset pre exit`
