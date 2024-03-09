@@ -1,6 +1,6 @@
 {
   "name": "aaronddm-demo-package-b",
-  "version": "0.1.0-canary.0",
+  "version": "0.1.0",
   "private": false,
   "sideEffects": false,
   "type": "module",
