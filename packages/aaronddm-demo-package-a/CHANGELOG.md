@@ -1,5 +1,11 @@
 # aaronddm-demo-package-a
 
+## 1.0.0
+
+### Major Changes
+
+- [#57](https://github.com/AaronDDM/demo-changeset/pull/57) [`3f8a3ed`](https://github.com/AaronDDM/demo-changeset/commit/3f8a3ed0dbdbd0ea6045c35092301007c61064cb) Thanks [@AaronDDM](https://github.com/AaronDDM)! - This is new feature 500
+
 ## 0.2.0
 
 ### Minor Changes
