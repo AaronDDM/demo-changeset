@@ -30,6 +30,7 @@
   <p>New package a feature 100</p>
   <p>New package a feature 2100</p>
   <p>New package a feature 500</p>
+  <p>New package a feature 600</p>
 
   <div class="card">
     <Counter />
