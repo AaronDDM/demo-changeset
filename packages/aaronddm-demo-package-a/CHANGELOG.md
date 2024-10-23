@@ -1,5 +1,11 @@
 # aaronddm-demo-package-a
 
+## 1.0.1
+
+### Patch Changes
+
+- [#59](https://github.com/AaronDDM/demo-changeset/pull/59) [`0611830`](https://github.com/AaronDDM/demo-changeset/commit/0611830ea89ff30e6492b45d08f5818aa3790562) Thanks [@pooja169usp](https://github.com/pooja169usp)! - Change to trigger the versions package
+
 ## 1.0.0
 
 ### Major Changes
